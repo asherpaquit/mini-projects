@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <div class="container">
+            <h1>Calculator ni Arits</h1>
+            <div class="display">
+                <input id="textDisplay">
+                <button onclick="clearInput()">C</button>
+            </div>
+            <table>
+                <tr>
+                    <td><button onclick="inputNumber(7);">7</button></td>
+                    <td><button onclick="inputNumber(8);">8</button></td>
+                    <td><button onclick="inputNumber(9);">9</button></td>
+                    <td><button onclick="mulNums()">x</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="inputNumber(4);">4</button></td>
+                    <td><button onclick="inputNumber(5);">5</button></td>
+                    <td><button onclick="inputNumber(6);">6</button></td>
+                    <td><button onclick="subNums()">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="inputNumber(1);">1</button></td>
+                    <td><button onclick="inputNumber(2);">2</button></td>
+                    <td><button onclick="inputNumber(3);">3</button></td>
+                    <td><button onclick="addNums()">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="inputNumber(0)">0</button></td>
+                    <td><button onclick="inputNumber()">.</button></td>
+                    <td><button onclick="delDisplay()">Del</button></td>
+                    <td><button onclick="equalDisplay()">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
