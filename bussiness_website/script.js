@@ -1,63 +1,46 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) =>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('.show');
-        }
-        else{
-            entry.target.classList.remove('.show');
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    // IntersectionObserver for elements with the class 'hidden'
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
     });
-})
 
-const hiddenElements = document.querySelectorAll('.welcome');
-hiddenElements.forEach((el) => observer.observe(el));
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
 
-document.addEventListener("DOMContentLoaded",function(){
-    var choi =  document.getElementById("login");
-    
-    function hover_effect(){
+    // Click event listener for element with the ID 'login'
+    var choi = document.getElementById("login");
+    function hover_effect() {
         alert("wowowoowow");
     }
+    choi.addEventListener("click", hover_effect);
 
-    choi.addEventListener("click",hover_effect);
-});
-
-
-document.addEventListener("DOMContentLoaded",function(){
-    var choi = document.querySelector('.login');
+    // Mouseenter and mouseleave event listeners for element with the class 'login'
     var choi_2 = document.querySelectorAll('.info_main, .info_news, .info_billings, .info_about, .info_prod');
-    
-    function hover_effect(){
-        choi_2.forEach(function(element){
+    function hover_effect() {
+        choi_2.forEach(function (element) {
             element.style.backgroundColor = "white";
             element.style.color = "black";
         });
     }
 
-    function none(){
-        choi_2.forEach(function(element){
+    function none() {
+        choi_2.forEach(function (element) {
             element.style.backgroundColor = "";
             element.style.color = "";
         });
     }
 
+    choi.addEventListener("mouseenter", hover_effect);
+    choi.addEventListener("mouseleave", none);
 
-    /*function hover_effect(){
-        choi_2.style.backgroundColor = "white";
-        choi_2.style.color = "black";
-    }
-    function none(){
-        choi_2.style.backgroundColor = "black";
-        choi_2.style.color = "white";
-    }*/
-
-
-    choi.addEventListener("mouseenter",hover_effect);
-    choi.addEventListener("mouseleave",none);
-});
-
-document.addEventListener("DOMContentLoaded", function(){
+    // Adding 'fade-in' class to the first h1 element
     var h1Element = document.querySelector('h1');
-    h1Element.classList.add('fade-in');
-})
+    if (h1Element) {
+        h1Element.classList.add('fade-in');
+    }
+});
