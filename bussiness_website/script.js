@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
             }
+            else{
+                entry.target.classList.remove('show');
+            }
         });
     });
 
@@ -13,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     hiddenElements.forEach((el) => observer.observe(el));
 
     // Click event listener for element with the ID 'login'
-    var choi = document.getElementById("login");
-    function hover_effect() {
+    const choi = document.getElementById("login");
+    function wowix() {
         alert("wowowoowow");
     }
-    choi.addEventListener("click", hover_effect);
+    choi.addEventListener("click", wowix);
 
     // Mouseenter and mouseleave event listeners for element with the class 'login'
     var choi_2 = document.querySelectorAll('.info_main, .info_news, .info_billings, .info_about, .info_prod');
@@ -43,4 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
     if (h1Element) {
         h1Element.classList.add('fade-in');
     }
+    //removing sa katong blueblue sa link **hala nagsasabi nito
+    var blueLinkFix = document.querySelectorAll('.i_m');
+    var blueLinkbox = document.querySelectorAll('.info_main, .info_news, .info_billings, .info_about, .info_prod');
+    function eliminate(){
+        blueLinkFix.forEach(function (element){
+            element.style.color = "white";
+        })
+    } 
+
+    function blacku(){
+        blueLinkFix.forEach(function (element){
+            element.style.color = "black";
+        })
+    }
+
+    /*const blueFix = document.querySelectorAll('.i_m .i_n .i_p i_b i_a i_l');
+    blueFix.addEventListener("mouseenter",none);
+    blueFix.addEventListener("mouseleave",eliminate);*/
+    // this is my wrong code **need to document this shi
+
+    const blueFix = document.querySelectorAll('.info_main');
+    blueFix.forEach(function (element) {
+    element.addEventListener("mouseenter", blacku);
+    element.addEventListener("mouseleave", eliminate);
+});
+
 });
