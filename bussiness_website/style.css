@@ -1,15 +1,22 @@
 .info{
     height: 5vh;
     width: 100%;
-    color: whitesmoke;
+   /* color: whitesmoke; */
     background-color: black;
     font-family: monospace;
 }
 
 .info_main:hover, .info_prod:hover, .info_billings:hover, .info_about:hover, .info_news:hover{
     color: black;
-    background-color: whitesmoke;
+    background-color: white;
     cursor: pointer;
+}
+/*.i_m:hover, .i_p:hover, .i_n:hover, .i_b:hover, .i_a:hover, .i_l:hover{
+    color: pink;
+}*/
+
+.i_m, .i_p, .i_n, .i_b, .i_a, .i_l{
+    color: white;
 }
 
 .container{

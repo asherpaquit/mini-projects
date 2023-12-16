@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     //removing sa katong blueblue sa link **hala nagsasabi nito
     var blueLinkFix = document.querySelectorAll('.i_m');
-    var blueLinkbox = document.querySelectorAll('.info_main, .info_news, .info_billings, .info_about, .info_prod');
+    
     function eliminate(){
         blueLinkFix.forEach(function (element){
             element.style.color = "white";
