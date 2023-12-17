@@ -1,9 +1,48 @@
+table{
+    font-family: monospace;
+}
+
+.abouting{
+    width: 100%;
+    border-radius: 1px solid black;
+}
+
+.abouting th{
+    border-radius: 1px solid black;
+}
+
 .info{
     height: 5vh;
     width: 100%;
    /* color: whitesmoke; */
     background-color: black;
     font-family: monospace;
+}
+
+
+
+.nagata{
+    position: relative;
+    width: 800px;
+    border-radius: 20px;
+}
+
+.trueno{
+    /*
+    width:  100%;
+    padding-bottom: 50%;
+    z-index: -400;
+    top: 0;
+    position:relative;
+    float:inline-start;
+    */
+    margin-left: 20%;
+    width: 50%;
+    position:absolute;
+    top: 5vh;
+    left: 0;
+    z-index: 0;
+    
 }
 
 .info_main:hover, .info_prod:hover, .info_billings:hover, .info_about:hover, .info_news:hover{
