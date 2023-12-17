@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     // IntersectionObserver for elements with the class 'hidden'
     const observer = new IntersectionObserver((entries) => {
@@ -33,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function none() {
         choi_2.forEach(function (element) {
-            element.style.backgroundColor = "";
-            element.style.color = "";
+            element.style.backgroundColor = "black";
+            element.style.color = "white";
         });
     }
 
@@ -47,29 +48,40 @@ document.addEventListener("DOMContentLoaded", function () {
         h1Element.classList.add('fade-in');
     }
     //removing sa katong blueblue sa link **hala nagsasabi nito
-    var blueLinkFix = document.querySelectorAll('.i_m');
-    
-    function eliminate(){
-        blueLinkFix.forEach(function (element){
-            element.style.color = "white";
-        })
-    } 
-
-    function blacku(){
-        blueLinkFix.forEach(function (element){
+    var loginCheck = document.querySelector('.login');
+    function switcherL_true(){
+        var info_bar = document.querySelectorAll('.i_m, .i_p, .i_n, .i_b, .i_a');
+        info_bar.forEach(function (element){
             element.style.color = "black";
-        })
+        });
+    };
+    function switcherL_false(){
+        var info_bar = document.querySelectorAll('.i_m, .i_p, .i_n, .i_b, .i_a');
+        info_bar.forEach(function (element){
+            element.style.color = "white";
+        });
+    };
+
+    loginCheck.addEventListener("mouseenter", switcherL_true);
+    loginCheck.addEventListener("mouseleave", switcherL_false);
+
+
+    var mainCheck = document.getElementsByClassName('info_main');
+    var prodCheck = document.querySelector('.info_prod');
+
+    function switcher_nav_true(element){
+        element.style.color = "white";
+        backgroundColor = "black";
+    }
+    function switcher_nav_false(element){
+        element.style.color = "black";
+        backgroundColor = "white";
     }
 
-    /*const blueFix = document.querySelectorAll('.i_m .i_n .i_p i_b i_a i_l');
-    blueFix.addEventListener("mouseenter",none);
-    blueFix.addEventListener("mouseleave",eliminate);*/
-    // this is my wrong code **need to document this shi
-
-    const blueFix = document.querySelectorAll('.info_main');
-    blueFix.forEach(function (element) {
-    element.addEventListener("mouseenter", blacku);
-    element.addEventListener("mouseleave", eliminate);
-});
-
+    mainCheck = this.addEventListener("mouseenter", function(){
+        switcher_nav_true(mainCheck);
+    })
+    mainCheck = this.addEventListener("mouseleave", function(){
+        switcher_nav_false(mainCheck);
+    })
 });

@@ -11,18 +11,21 @@
     background-color: white;
     cursor: pointer;
 }
-/*.i_m:hover, .i_p:hover, .i_n:hover, .i_b:hover, .i_a:hover, .i_l:hover{
-    color: pink;
-}*/
-
-.i_m, .i_p, .i_n, .i_b, .i_a, .i_l{
-    color: white;
+.i_m:hover, .i_p:hover, .i_n:hover, .i_b:hover, .i_a:hover{
+    color: black;
 }
+
+.i_m, .i_p, .i_n, .i_b, .i_a{
+    color: white;
+} 
 
 .container{
     position: relative;
     width: 100%;
     height: 100vh;
+    .i_m, .i_p, .i_n, .i_b, .i_a{
+        color: white;
+    } 
 }
 
 .container_img{
@@ -147,11 +150,14 @@ section{
     transition-delay: 200ms;
 }
 .prods:nth-child(3){
-    transition-delay: 400ms;
+    transition-delay: 250ms;
 }
 .prods:nth-child(4)
 {
-    transition-delay: 500ms;
+    transition-delay: 320ms;
+}
+.prods:nth-child(5){
+    transition-delay: 300ms;
 }
 .prod_img{
     width: 100%;
@@ -159,7 +165,7 @@ section{
 
 .buy_cars{
     font-family: monospace;
-    margin-top: 50vh;
+    margin-top: 57vh;
     width: 220px;
     border-radius: 200px;
     position: absolute;
@@ -180,8 +186,15 @@ section{
 }
 
 .prod_title{
-    margin-top: 60vh;
+    margin-top: 65vh;
     position: absolute;
+}
+
+.specs{
+    position: absolute;
+    margin-top: 82vh;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 .slider_container{
@@ -239,9 +252,10 @@ section{
     
     height: 5vh;
     width: 100%;
-    color: whitesmoke;
-    background-color: black;
+    color: black;
+    background-color: white;
     font-family: monospace;
+    border: 2px solid black;
 }
 .insta-link:hover, .facebook-link:hover, .twitter-link:hover{
     color: black;
@@ -254,6 +268,8 @@ section{
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
+    background-color: black;
+    color: white;
     border: 2px solid black;
 }
 
