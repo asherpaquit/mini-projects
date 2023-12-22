@@ -16,6 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 
+    const observers = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show2');
+            }
+            else{
+                entry.target.classList.remove('show2');
+            }
+        });
+    });
+
+    const hiddensElements = document.querySelectorAll('.hidden2');
+    hiddensElements.forEach((el) => observers.observe(el));
+
     // Click event listener for element with the ID 'login'
     const choi = document.getElementById("login");
     function wowix() {
@@ -48,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         h1Element.classList.add('fade-in');
     }
     //removing sa katong blueblue sa link **hala nagsasabi nito
-    var loginCheck = document.querySelector('.login');
+    /*var loginCheck = document.querySelector('.login');
     function switcherL_true(){
         var info_bar = document.querySelectorAll('.i_m, .i_p, .i_n, .i_b, .i_a');
         info_bar.forEach(function (element){
@@ -83,5 +98,5 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     mainCheck = this.addEventListener("mouseleave", function(){
         switcher_nav_false(mainCheck);
-    })
+    }) */
 });

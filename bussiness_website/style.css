@@ -62,9 +62,6 @@ table{
     position: relative;
     width: 100%;
     height: 100vh;
-    .i_m, .i_p, .i_n, .i_b, .i_a{
-        color: white;
-    } 
 }
 
 .container_img{
@@ -72,6 +69,17 @@ table{
     
 }
 
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.more_about{
+    position: relative;
+    width: 100%;
+    
+}
 
 button{
     cursor: pointer;
@@ -176,6 +184,19 @@ section{
 }
 
 .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hidden2{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 3.2s;
+}
+
+.show2{
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
