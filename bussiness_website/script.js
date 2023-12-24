@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     // IntersectionObserver for elements with the class 'hidden'
     const observer = new IntersectionObserver((entries) => {
@@ -32,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
     hiddensElements.forEach((el) => observers.observe(el));
 
     // Click event listener for element with the ID 'login'
-    const choi = document.getElementById("login");
+    /*const choi = document.getElementById("login");
     function wowix() {
         alert("wowowoowow");
     }
-    choi.addEventListener("click", wowix);
+    choi.addEventListener("click", wowix); */
 
     // Mouseenter and mouseleave event listeners for element with the class 'login'
     var choi_2 = document.querySelectorAll('.info_main, .info_news, .info_billings, .info_about, .info_prod');
@@ -99,4 +98,22 @@ document.addEventListener("DOMContentLoaded", function () {
     mainCheck = this.addEventListener("mouseleave", function(){
         switcher_nav_false(mainCheck);
     }) */
+
+  
 });
+
+function inputNumber(a){
+    display = document.getElementById("textDisplay");
+        display.value = a.toString()
+}
+
+function clearInput(){
+    display = document.getElementById("textDisplay");
+    if(display.value == 0){
+        display.value = " ";
+        alert("choose a product first!");
+    }
+    else{
+        display.value = "Congrats! you have bought from tofu cars";
+    }
+}

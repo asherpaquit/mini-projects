@@ -148,11 +148,29 @@ h3{
 
 }
 
-.container_button{
+.billings-container{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+input{
+    width: 420px;
+}
+
+.billings-buy{
+    font-family: monospace;
+    width: 220px;
+    border-radius: 200px;
+    position: absolute;
+    background-color: black;
+    color: white;
     
+}
+
+
+.billings-container tr{
+    height: 10vh;
 }
 
 .buy_now{
