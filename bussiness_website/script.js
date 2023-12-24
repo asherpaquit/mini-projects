@@ -117,3 +117,8 @@ function clearInput(){
         display.value = "Congrats! you have bought from tofu cars";
     }
 }
+
+function congrats(){
+    display = document.getElementById("login");
+    display.value = "Congrats";
+}
