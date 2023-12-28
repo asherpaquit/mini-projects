@@ -25,22 +25,25 @@
         <table class="billings-container hidden">
             <button onclick="clearInput()">buy now</button>
             <tr>
-                <td><button class="billings-buy" onclick="inputNumber(30.00);">Trueno 30$</button></td>
+                <td><button class="billings-buy" id="trueno" onclick="inputNumber(30.00);" onmouseover="display_trueno()">Trueno 30$</button></td>
             </tr>
             <tr>
-                <td><button class="billings-buy" onclick="inputNumber(40.00);">Silvia 40$</button></td>
+                <td><button class="billings-buy" id="silvia" onclick="inputNumber(40.00);">Silvia 40$</button></td>
             </tr>
             <tr>
-                <td><button class="billings-buy" onclick="inputNumber(60.00);">Lancer 60$</button></td>
+                <td><button class="billings-buy" id="lancer" onclick="inputNumber(60.00);">Lancer 60$</button></td>
             </tr>
             <tr>
-                <td><button class="billings-buy" onclick="inputNumber(65.00);">Supra RZ 65$</button></td>
+                <td><button class="billings-buy" id="supra" onclick="inputNumber(65.00);">Supra RZ 65$</button></td>
             </tr>
             <tr>
-                <td><button class="billings-buy" onclick="inputNumber(60.00);">Skyline 60$</button></td>
+                <td><button class="billings-buy" id="skyline" onclick="inputNumber(60.00);">Skyline 60$</button></td>
             </tr>
         </table>
-
+        
+        <div class="prod-display hidden">
+            <img src="img/supra_real.png" id="hoverImage">
+        </div>
       
         <div class="visit_more">
             <p>visit us more in our social media pages</p>

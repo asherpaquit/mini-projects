@@ -168,6 +168,12 @@ input{
     
 }
 
+.prod-display{
+    display: flex;
+    position:relative;
+    bottom: 70vh;
+}
+
 
 .billings-container tr{
     height: 10vh;
