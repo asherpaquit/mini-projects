@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Click event listener for element with the ID 'login'
     const choi = document.getElementById("login");
     function wowix() {
-        alert("wowowoowow");
+        alert("You are entering the login page");
     }
     choi.addEventListener("click", wowix); 
 
